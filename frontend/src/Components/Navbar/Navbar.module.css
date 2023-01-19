@@ -1,0 +1,41 @@
+.navMainDiv{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(197, 199, 199);
+    align-items: center;
+    gap: 20px;
+    position:fixed;
+}
+.navSubDiv1{
+    width: 15%;
+}
+.logoSize{
+    height: 200px;
+}
+.navSubDiv2{
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+    width: 40%;
+    height: 100px;
+    align-items: center;
+}
+.navSubDiv3{
+    width: 25%;
+}
+.navSubDiv4{
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.navSubDiv2MenSec, .navSubDiv2WomenSec, .navSubDiv2KidsSec, .navSubDiv2HomeSec, .navSubDiv2BeautySec{
+    display: none;
+    /* background-color: red; */
+    /* display: flex; */
+}
+/* .navSubDiv2Men{
+
+} */
