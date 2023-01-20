@@ -5,6 +5,8 @@ const menSchema = mongoose.Schema({
   Brand_Name: { type: String, require: true },
   Price: { type: String, require: true },
   color: { type: String, require: true },
+},{
+    versionKey: false
 });
 
 const MEN = mongoose.model("men", menSchema);

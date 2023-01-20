@@ -8,6 +8,8 @@ const cartSchema = mongoose.Schema({
   color: { type: String, required: true },
   quantity: { type: Number, required: true },
   UserId: { type: String, required: true },
+},{
+    versionKey: false
 });
 
 const CART = mongoose.model("cart", cartSchema);

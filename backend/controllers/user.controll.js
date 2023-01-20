@@ -2,10 +2,10 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const {USER} = require("../models/user.model");
+const { Router } = require("express");
+const userControll = Router();
 
-const userController = express.Router();
-
-userController.post("/register", async (req, res) => {
+userControll.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
 
   await bcrypt.hash(password, 8, async (err, hash) => {
@@ -17,7 +17,7 @@ userController.post("/register", async (req, res) => {
   });
 });
 
-userController.post("/login", async (req, res) => {
+userControll.post("/login", async (req, res) => {
   const { email, password } = req.body;
   // console.log(email);
   const user = await USER.findOne({ email });
@@ -47,4 +47,4 @@ userController.post("/login", async (req, res) => {
   });
 });
 
-module.exports = {userController};
+module.exports = {userControll};

@@ -1,10 +1,11 @@
 const express = require("express");
+const { Router } = require("express");
 
 const WOMEN = require("../models/women.model");
 
-const womenController = express.Router();
+const womenControll = Router();
 
-womenController.get("/", async (req, res) => {
+womenControll.get("/", async (req, res) => {
   // console.log('in')
   const { sortFilter } = req.query;
   let data;
@@ -27,7 +28,7 @@ womenController.get("/", async (req, res) => {
   res.send(data);
 });
 
-womenController.get("/productdetails/:id", async (req, res) => {
+womenControll.get("/productdetails/:id", async (req, res) => {
   const { id } = req.params;
   console.log(id);
 
@@ -35,7 +36,7 @@ womenController.get("/productdetails/:id", async (req, res) => {
   res.status(200).send(data);
 });
 
-womenController.post("/insert", (req, res) => {
+womenControll.post("/insert", (req, res) => {
   const { Image, Brand_Name, Price, color } = req.body;
 
   const data = WOMEN.create({
@@ -48,4 +49,4 @@ womenController.post("/insert", (req, res) => {
   res.status(200).send("Data Added");
 });
 
-module.exports = {womenController};
+module.exports = {womenControll};

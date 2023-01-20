@@ -1,8 +1,10 @@
 const express = require("express");
 const {CART} = require("../models/cart.model");
-const cartController = express.Router();
+const { Router } = require("express");
 
-cartController.get("/:id", async (req, res) => {
+const cartControll = Router();
+
+cartControll.get("/:id", async (req, res) => {
   const { id } = req.params;
 
   const items = await CART.find({ id: id });
@@ -10,7 +12,7 @@ cartController.get("/:id", async (req, res) => {
   res.status(200).send(items);
 });
 
-cartController.delete("/delete/:id", async (req, res) => {
+cartControll.delete("/delete/:id", async (req, res) => {
   const { id } = req.params;
 
   const deletedData = await CART.deleteOne({ id: id });
@@ -20,7 +22,7 @@ cartController.delete("/delete/:id", async (req, res) => {
   res.status(200).send(data);
 });
 
-cartController.patch("/:id/edit", async (req, res) => {
+cartControll.patch("/:id/edit", async (req, res) => {
   const { id } = req.params;
   console.log(id);
   const { size, quantity } = req.body;
@@ -34,7 +36,7 @@ cartController.patch("/:id/edit", async (req, res) => {
   return res.status(200).send(updated_product);
 });
 
-cartController.post("/create", async (req, res) => {
+cartControll.post("/create", async (req, res) => {
   const { productName, Image, price, size, color, quantity, UserId } = req.body;
   const data = await CART.create({
     productName,
@@ -48,4 +50,4 @@ cartController.post("/create", async (req, res) => {
   return res.status(200).send({ message: "Item addeed", cart: data });
 });
 
-module.exports = {cartController};
+module.exports = {cartControll};

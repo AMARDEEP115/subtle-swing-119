@@ -1,0 +1,21 @@
+[debug] [2023-01-21T05:27:10.431Z] ----------------------------------------------------------------------
+[debug] [2023-01-21T05:27:10.435Z] Command:       /usr/local/Cellar/node/19.1.0/bin/node /usr/local/bin/firebase init
+[debug] [2023-01-21T05:27:10.435Z] CLI Version:   11.21.0
+[debug] [2023-01-21T05:27:10.436Z] Platform:      darwin
+[debug] [2023-01-21T05:27:10.436Z] Node Version:  v19.1.0
+[debug] [2023-01-21T05:27:10.436Z] Time:          Sat Jan 21 2023 10:57:10 GMT+0530 (India Standard Time)
+[debug] [2023-01-21T05:27:10.436Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-21T05:27:10.446Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-21T05:27:10.446Z] > authorizing via signed-in user (debasistripathy.india@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/apple/Desktop/Projects/subtle-swing-119/frontend
+

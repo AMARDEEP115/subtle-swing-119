@@ -1,9 +1,10 @@
 const express = require("express");
 const {MEN} = require("../models/men.model");
+const { Router } = require("express");
 
-const menController = express.Router();
+const menControll = Router();
 
-menController.get("/", async (req, res) => {
+menControll.get("/", async (req, res) => {
     const { sortFilter } = req.query;
     let data;
     if (sortFilter) {
@@ -25,7 +26,7 @@ menController.get("/", async (req, res) => {
     res.send(data);
 });
 
-menController.get("/productdetails/:id", async (req, res) => {
+menControll.get("/productdetails/:id", async (req, res) => {
   const { id } = req.params;
   console.log(id);
 
@@ -33,7 +34,7 @@ menController.get("/productdetails/:id", async (req, res) => {
   res.status(200).send(data);
 });
 
-menController.post("/insert",  async (req, res) => {
+menControll.post("/insert",  async (req, res) => {
   const { Image, Brand_Name, Price, color } = req.body;
 
   const data = await MEN.create({
@@ -46,4 +47,4 @@ menController.post("/insert",  async (req, res) => {
   res.status(200).send("Data Added");
 });
 
-module.exports = {menController};
+module.exports = {menControll};
