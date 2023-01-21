@@ -17,7 +17,7 @@ const reducer = (state = initialState, action) => {
       return {...state, isLoading:false, isError: true}
 
     case types.GET_PRODUCTS_SUCCESS: 
-      return { ...state, isLoading: false, tasks: payload}
+      return { ...state, isLoading: false, products: payload}
     default:
       return state
   }
