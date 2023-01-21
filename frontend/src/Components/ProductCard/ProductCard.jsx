@@ -1,6 +1,7 @@
-import { Navigate, useNavigate } from 'react-router-dom'
+import { StarIcon } from '@chakra-ui/icons'
+import { json, Link, Navigate, useNavigate } from 'react-router-dom'
 import cards from './productCard.module.css'
-const ProductCard = ({image,rating,count,name,brand,price,off_price,direction,id}) => {
+const ProductCard = ({image,rating,count,name,brand,price,off_price,direction,address}) => {
 
 
 
@@ -13,8 +14,13 @@ const ProductCard = ({image,rating,count,name,brand,price,off_price,direction,id
 // let price=699
 
 // let offprice=1049
-const Navi=(id,direction)=>{
-  return <Navigate to={`/singlepage/${direction}/${id}`} />
+
+const navigate=useNavigate()
+const Navi=(direction,address)=>{
+  localStorage.setItem("unique_prod",JSON.stringify(""))
+  localStorage.setItem("unique_prod",JSON.stringify(address))
+  navigate(`/singlepage/${direction}`)
+
 }
 // const =(id)=>{
 
@@ -26,18 +32,18 @@ if(image!="" && price!="" ){
 
 
   return (
-    <div className={cards.product_main_container}  >
+    <div className={cards.product_main_container} onClick={()=>Navi(direction,address)} >
 
         <div className={cards.product_image_container} >
             <img src={image} alt="" className={cards.product_image}/>
 
         </div>
         <div>
-        <div className={cards.product_rating}><p>{rating }</p><p>{count}</p>  </div>
+        <div className={cards.product_rating}> <p className={cards.first_p}><StarIcon color="yellow"/>{rating }</p> &nbsp; | <p>{count}</p>  </div>
           
             <h3 className={cards.product_brand}>{brand}</h3>
             <p className={cards.product_name}>{name}</p>
-<span> {price} -{off_price}</span>
+<div className={cards.price_container}> <p className={cards.on_price}>{price}</p> <p className={cards.off_price}>{off_price}</p></div>
           
         </div>
       

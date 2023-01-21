@@ -1,27 +1,21 @@
-.products_navbar{
-    border: 1px solid red;
-background-color: rgb(127, 100, 62);
-    height: 17vh;
-    width: 100%;
-   
-}
-.main_section{display: flex;
+
+.main_section{
+    display: flex;
 }
 
 
 
-.product_section{
-    width: 75%;
-
-    border: 1px solid rgb(171, 93, 93);
-}
 
 
 
 .product_section{
     display: grid;
+    width: 75%;
+    margin-left: 5%;
+    margin: auto;
     grid-template-columns: repeat(4 ,1fr);
-    column-gap: 7%;
+    column-gap: 6%;
+    row-gap: 2%;
 }
 
 .product_section>div{
