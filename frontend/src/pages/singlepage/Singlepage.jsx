@@ -19,6 +19,9 @@ import StarIcon from "@mui/icons-material/Star";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import { Navbar } from "../../Components/Navbar/Navbar";
+import { Footer } from "../../Components/Footer/Footer";
+
 // import Navbar from "../../Components/Navbar";
 // import Footer from "../../Components/Footer";
 
@@ -26,44 +29,73 @@ function SinglePage() {
   const [data, setData] = useState([]);
   //   const { addToData } = useContext(FilterContext);
 
-  const { id } = useParams();
-  console.log(id);
+  let temp=JSON.parse(localStorage.getItem("unique_prod"))
 
+  console.log(temp)
   const dispatch = useDispatch();
+  const { direction } = useParams();
+  console.log(direction);
 
-  const getData = async () => {
-    let res = await fetch(`${id}`);
-    let datas = await res.json();
-    console.log(datas);
-    setData(datas);
-  };
+
+  const getData = () => {
+    const dataparams={
+      params:{
+        
+        "product-base href":temp
+       
+      }
+      }
+      
+    
+         axios.get(`https://brainy-goat-shoulder-pads.cyclic.app/${direction}`,dataparams)
+          .then((r) => {
+      console.log(r.data[0])
+          setData(r.data)
+           
+           
+          })
+          .catch((e) => {
+            console.log(e)
+          });
+      };
+   
+
   useEffect(() => {
     getData();
   }, []);
 
 
+
   const addToData = (data) => {
-    axios.post('https://scary-fly-gilet.cyclic.app/cart', data).then((r) => console.log(r)).catch((e) => console.log(e))
+alert("Product is added")
+    axios.post('https://brainy-goat-shoulder-pads.cyclic.app/cart', data)
+    .then((r) => console.log(r))
+    .catch((e) => console.log(e))
   }
 
-  const addToDataWishlist = (data) => {
-    axios
-      .post("https://scary-fly-gilet.cyclic.app/wishlist", data)
-      .then((r) => console.log(r))
-      .catch((e) => console.log(e));
-  };
+  // const addToDataWishlist = (data) => {
+  //   axios
+  //     .post("https://scary-fly-gilet.cyclic.app/wishlist", data)
+  //     .then((r) => console.log(r))
+  //     .catch((e) => console.log(e));
+  // };
   return (
     <>
-      {data.map((ele) => {
+     <Navbar />
+     <br />
+     <br />
+     <br />
+     <br />
+      { data.map((ele) => {
         return (
           <>
           
-            <DetailsMainDiv key={ele.id}>
+            <DetailsMainDiv key="1" >
               <ImageContainer>
                 <ImgDiv>
-                  <Img src={ele.images.image1} />
+                  <Img src={ele["img-responsive src"]} />
                 </ImgDiv>
-                <ImgDiv>
+                {/* <ImgDiv>
                   <Img src={ele.images.image2} />
                 </ImgDiv>
                 <ImgDiv>
@@ -71,7 +103,7 @@ function SinglePage() {
                 </ImgDiv>
                 <ImgDiv>
                   <Img src={ele.images.image4} />
-                </ImgDiv>
+                </ImgDiv> */}
               </ImageContainer>
               <SubDetailsDiv>
                 <div style={{ width: "95%", margin: "auto" }}>
@@ -90,7 +122,7 @@ function SinglePage() {
                         </p>
                       </b>
                       <p style={{ fontSize: "20px", color: "#8b8d97" }}>
-                        {ele.title}
+                        {ele["product-brand"]}
                       </p>
                     </div>
                     <RatingDiv>
@@ -104,7 +136,7 @@ function SinglePage() {
                       >
                         <b>
                           {" "}
-                          <p>{ele.rating} </p>
+                          <p>{ele["product-ratingsContainer"]} </p>
                         </b>
                         <p style={{ color: "#48958f" }}>
                           <StarIcon fontSize="small" />
@@ -118,24 +150,25 @@ function SinglePage() {
                         }}
                       >
                         {" "}
-                        <p> | {ele.count} Ratings</p>
+                        <p> | {ele["product-ratingsCount"]} Ratings</p>
                       </div>
                     </RatingDiv>
                   </div>
                   <hr></hr>
-                  <div style={{ textAlign: "left", marginTop: "-5px" }}>
+                  <div style={{ textAlign: "left", marginTop: "-5px",marginBottom:"10px" }}>
                     <div
                       style={{
                         display: "flex",
                         gap: "10px",
-                        width: "270px",
+                        width: "80%",
+                        marginBottom:"17px"
                       }}
                     >
                       <p>
                         {" "}
                         <b
                           style={{ color: "darkslategray", fontSize: "22px" }}
-                        >{`Rs.${ele.price}`}</b>
+                        >{`${ele["product-discountedPrice"]}`}</b>
                       </p>
                       <p
                         style={{
@@ -145,15 +178,15 @@ function SinglePage() {
                         }}
                       >
                         {" "}
-                        Rs.
+                        
                         <span style={{ textDecoration: "line-through" }}>
-                          {`${ele.off_price}`}{" "}
+                          {`${ele["product-strike"]}`}{" "}
                         </span>
                       </p>
                       <p style={{ color: "#ee9d20" }}>
                         <b style={{ fontSize: "22px" }}>
                           {" "}
-                          {`(${ele.discount}% OFF)`}{" "}
+                          {`(${ele["product-discountPercentage"]}% OFF)`}{" "}
                         </b>
                       </p>
                     </div>
@@ -191,13 +224,11 @@ function SinglePage() {
                       >{`SIZE CHART >`}</p>
                     </div>
                     <div style={{ display: "flex", gap: "10px" }}>
-                      {ele.sizes.map((ele) => {
-                        return (
+                     
                           <SizesDIv>
-                            <p>{ele}</p>
+                            <p>{ele["product-sizeInventoryPresent"]}</p>
                           </SizesDIv>
-                        );
-                      })}
+                     
                     </div>
                   </div>
                   <div
@@ -208,11 +239,7 @@ function SinglePage() {
                     }}
                   >
                     <BagDiv
-                      onClick={() => {
-                        dispatch(() => {
-                          addToData(ele);
-                        });
-                      }}
+                    onClick={()=>addToData(ele)}
                     >
                       <ShoppingBagIcon />
                       <p>
@@ -220,7 +247,8 @@ function SinglePage() {
                       </p>
                     </BagDiv>
                     <WishDiv
-                      onClick={() => { dispatch(addToDataWishlist(ele)) }}>
+                      // onClick={() => { dispatch(addToDataWishlist(ele)) }}
+                      >
                       <div style={{ color: "gray" }}>
                         <FavoriteBorderIcon />
                       </div>
@@ -366,6 +394,7 @@ function SinglePage() {
           </>
         );
       })}
+      <Footer />
     </>
   );
 }

@@ -2,25 +2,26 @@ import styled from "styled-components";
 
 export const DetailsMainDiv = styled.div`
   // border: 1px solid black;
-  width: 100%;
+  width: 70%;
   height: auto;
   display: flex;
+
+margin:auto;
   margin-bottom:15px;
 `;
 
 export const ImageContainer = styled.div`
   width: 55%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+
+margin-right:5%;
   padding: 30px;
   gap: 30px;
   div {
     width: 100%;
     /* border: 1px solid; */
     img {
-      width: 100%;
-      height: 100%;
+      width: 90%;
+      height: 80%;
     }
   }
 `;
@@ -36,7 +37,7 @@ export const Img = styled.img`
 // subdetails
 
 export const SubDetailsDiv = styled.div`
-  width: 40%;
+  width: 80%;
 `;
 export const WishDiv = styled.div`
   border: 0.3px solid lightgray;
