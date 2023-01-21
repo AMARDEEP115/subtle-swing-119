@@ -5,25 +5,22 @@ background-color: rgb(127, 100, 62);
     width: 100%;
    
 }
-.main_section{display: flex;
+.main_section{display: flex;}
+
+.filter_section{
+    width: 20%;
+    border:1px solid black;
+
+
 }
-
-
 
 .product_section{
     width: 75%;
 
     border: 1px solid rgb(171, 93, 93);
 }
-
-
-
 .product_section{
     display: grid;
     grid-template-columns: repeat(4 ,1fr);
     column-gap: 7%;
-}
-
-.product_section>div{
-    border: 1px solid grey;
 }
