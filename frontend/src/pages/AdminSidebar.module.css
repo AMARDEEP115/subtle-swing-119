@@ -1,0 +1,46 @@
+.TagName {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 1rem;
+    color: #2B65EC;
+    /* color: rgb(255, 177, 132); */
+}
+
+.TagItems:hover {
+    background-color: rgb(249, 215, 195);
+}
+
+.TagItems {
+    font-size: .8rem;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding-left: 5%;
+    margin-top: 10px;
+}
+
+.TagItems>h3 {
+    margin-left: 25px;
+    color: rgb(141, 141, 141);
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.SideSmall{
+    display: none;
+}
+
+.SideFull{
+    width: 220px;
+}
+
+@media screen and (min-width:280px) and (max-width:730px){
+    .SideFull{
+        display: none;
+    }
+    .SideSmall{
+        display: block;
+    }
+}

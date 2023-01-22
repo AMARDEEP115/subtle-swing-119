@@ -1,0 +1,23 @@
+.Litags{
+    list-style-type: none;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.Litags:hover {
+    background-color: rgb(249, 215, 195);
+}
+
+.NaTags{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+@media screen and (min-width:280px) and (max-width:730px){
+    .NaTags{
+        display: none;
+    }
+}

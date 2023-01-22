@@ -90,9 +90,9 @@ export const SizesDIv = styled.div`
 export const RatingDiv = styled.div`
 display: flex;
 border: 0.3px solid lightgray;
-width:150px;
-height:20px;
-padding:7px 5px;
+width:200px;
+height:40px;
+padding:15px;
 margin-bottom: 15px;
 font-size:16px;
 gap:10px;

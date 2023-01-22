@@ -28,7 +28,7 @@ const Kids = () => {
           "product-brand": searchParams.getAll("category"),
         },
       };
-      console.log(dataparams);
+      // console.log(dataparams);
       dispatch(getProductsKids(dataparams));
     }
   }, [searchParams, dispatch, location]);

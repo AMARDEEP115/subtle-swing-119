@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import styles from "./Navbar.module.css";
-import { Link,useNavigate } from "react-router-dom";
+import { Link,Navigate,useNavigate } from "react-router-dom";
 import logo from "./SHOP-IT-EASY.png";
 import { FaRegHeart,FaUserAlt,FaShoppingBag } from 'react-icons/fa';
 import {FiSearch} from 'react-icons/fi'
@@ -17,6 +17,8 @@ const Navbar = () => {
   const [hover3, setHover3] = useState(false);
   const [hover4, setHover4] = useState(false);
   const [hover5, setHover5] = useState(false);
+
+  const navi=useNavigate();
 
   show
     ? (document.querySelector("body").style.overflow = "hidden")
@@ -37,12 +39,22 @@ const Navbar = () => {
     //     }
      
     // }
+    const token=localStorage.getItem("token");
+    const LoggedinName=localStorage.getItem("LoggedinName");
+    const LoggedinEmail=localStorage.getItem("LoggedinEmail");
+
+    const handleLogout=()=>{
+      localStorage.removeItem("token");
+      localStorage.removeItem("LoggedinName");
+      localStorage.removeItem("LoggedinEmail");
+      return navi("/");
+    }
 
 
   return (
     <div className={styles.navMainDiv}>
       <div className={styles.navSubDiv1}>
-        <img src={logo} alt="logo" className={styles.logoSize} />
+        <Link to="/"><img src={logo} alt="logo" className={styles.logoSize}/></Link>
       </div>
       <div className={styles.navSubDiv2}>
         <div className={styles.dropdown}>
@@ -61,20 +73,20 @@ const Navbar = () => {
                 if want to link it to any page use this code
                 <Link to="/products/clothing">Clothing</Link>
                  */}
-                <a href="/">T-Shirts</a>
-                <a href="/">Casual Shirts</a>
-                <a href="/">Formal Shirts</a>
-                <a href="/">Sweatshirts</a>
-                <a href="/">Sweaters</a>
-                <a href="/">Jackets</a>
-                <a href="/">Blazers & Coats</a>
-                <a href="/">Suits</a>
-                <a href="/">Rain Jackets</a><br/>
+                <Link to="/mens">T-Shirts</Link>
+                <Link to="/mens">Casual Shirts</Link>
+                <Link to="/mens">Formal Shirts</Link>
+                <Link to="/mens">Sweatshirts</Link>
+                <Link to="/mens">Sweaters</Link>
+                <Link to="/mens">Jackets</Link>
+                <Link to="/mens">Blazers & Coats</Link>
+                <Link to="/mens">Suits</Link>
+                <Link to="/mens">Rain Jackets</Link><br/>
                 <p className={styles.dropHeadings}>Indian & Festive Wear</p>
-                <a href="/">Kurtas & Kurta Sets</a>
-                <a href="/">Nehru Jackets</a>
-                <a href="/">Sherwanis</a>
-                <a href="/">Dhotis</a>
+                <Link to="/mens">Kurtas & Kurta Sets</Link>
+                <Link to="/mens">Nehru Jackets</Link>
+                <Link to="/mens">Sherwanis</Link>
+                <Link to="/mens">Dhotis</Link>
               </div>
               <div>
                 <p className={styles.dropHeadings}>Bottom Wear</p>
@@ -156,20 +168,20 @@ const Navbar = () => {
                 if want to link it to any page use this code
                 <Link to="/products/clothing">Clothing</Link>
                  */}
-                <a href="/">T-Shirts</a>
-                <a href="/">Casual Shirts</a>
-                <a href="/">Formal Shirts</a>
-                <a href="/">Sweatshirts</a>
-                <a href="/">Sweaters</a>
-                <a href="/">Jackets</a>
-                <a href="/">Blazers & Coats</a>
-                <a href="/">Suits</a>
-                <a href="/">Rain Jackets</a><br/>
+                <Link to="/womens">T-Shirts</Link>
+                <Link to="/womens">Casual Shirts</Link>
+                <Link to="/womens">Formal Shirts</Link>
+                <Link to="/womens">Sweatshirts</Link>
+                <Link to="/womens">Sweaters</Link>
+                <Link to="/womens">Jackets</Link>
+                <Link to="/womens">Blazers & Coats</Link>
+                <Link to="/womens">Suits</Link>
+                <Link to="/womens">Rain Jackets</Link><br/>
                 <p className={styles.dropHeadings}>Indian & Festive Wear</p>
-                <a href="/">Kurtas & Kurta Sets</a>
-                <a href="/">Nehru Jackets</a>
-                <a href="/">Sherwanis</a>
-                <a href="/">Dhotis</a>
+                <Link to="/womens">Kurtas & Kurta Sets</Link>
+                <Link to="/womens">Nehru Jackets</Link>
+                <Link to="/womens">Sherwanis</Link>
+                <Link to="/womens">Dhotis</Link>
               </div>
               <div>
                 <p className={styles.dropHeadings}>Bottom Wear</p>
@@ -251,20 +263,20 @@ const Navbar = () => {
                 if want to link it to any page use this code
                 <Link to="/products/clothing">Clothing</Link>
                  */}
-                <a href="/">T-Shirts</a>
-                <a href="/">Casual Shirts</a>
-                <a href="/">Formal Shirts</a>
-                <a href="/">Sweatshirts</a>
-                <a href="/">Sweaters</a>
-                <a href="/">Jackets</a>
-                <a href="/">Blazers & Coats</a>
-                <a href="/">Suits</a>
-                <a href="/">Rain Jackets</a><br/>
+                <Link to="/kids">T-Shirts</Link>
+                <Link to="/kids">Casual Shirts</Link>
+                <Link to="/kids">Formal Shirts</Link>
+                <Link to="/kids">Sweatshirts</Link>
+                <Link to="/kids">Sweaters</Link>
+                <Link to="/kids">Jackets</Link>
+                <Link to="/kids">Blazers & Coats</Link>
+                <Link to="/kids">Suits</Link>
+                <Link to="/kids">Rain Jackets</Link><br/>
                 <p className={styles.dropHeadings}>Indian & Festive Wear</p>
-                <a href="/">Kurtas & Kurta Sets</a>
-                <a href="/">Nehru Jackets</a>
-                <a href="/">Sherwanis</a>
-                <a href="/">Dhotis</a>
+                <Link to="/kids">Kurtas & Kurta Sets</Link>
+                <Link to="/kids">Nehru Jackets</Link>
+                <Link to="/kids">Sherwanis</Link>
+                <Link to="/kids">Dhotis</Link>
               </div>
               <div>
                 <p className={styles.dropHeadings}>Bottom Wear</p>
@@ -441,20 +453,20 @@ const Navbar = () => {
                 if want to link it to any page use this code
                 <Link to="/products/clothing">Clothing</Link>
                  */}
-                <a href="/">T-Shirts</a>
-                <a href="/">Casual Shirts</a>
-                <a href="/">Formal Shirts</a>
-                <a href="/">Sweatshirts</a>
-                <a href="/">Sweaters</a>
-                <a href="/">Jackets</a>
-                <a href="/">Blazers & Coats</a>
-                <a href="/">Suits</a>
-                <a href="/">Rain Jackets</a><br/>
+                <Link to="/womens">T-Shirts</Link>
+                <Link to="/womens">Casual Shirts</Link>
+                <Link to="/womens">Formal Shirts</Link>
+                <Link to="/womens">Sweatshirts</Link>
+                <Link to="/womens">Sweaters</Link>
+                <Link to="/womens">Jackets</Link>
+                <Link to="/womens">Blazers & Coats</Link>
+                <Link to="/womens">Suits</Link>
+                <Link to="/womens">Rain Jackets</Link><br/>
                 <p className={styles.dropHeadings}>Indian & Festive Wear</p>
-                <a href="/">Kurtas & Kurta Sets</a>
-                <a href="/">Nehru Jackets</a>
-                <a href="/">Sherwanis</a>
-                <a href="/">Dhotis</a>
+                <Link to="/womens">Kurtas & Kurta Sets</Link>
+                <Link to="/womens">Nehru Jackets</Link>
+                <Link to="/womens">Sherwanis</Link>
+                <Link to="/womens">Dhotis</Link>
               </div>
               <div>
                 <p className={styles.dropHeadings}>Bottom Wear</p>
@@ -569,13 +581,16 @@ const Navbar = () => {
             <div className={styles.dropdownFlex}>
               <div style={{width:"500px"}}>
                 <p className={styles.dropHeadings}>Welcome</p>
-                <a>To access account and manage orders</a>
+                {LoggedinName!=null && <h3>{LoggedinName}</h3>}
+                {LoggedinEmail!=null && <h3>{LoggedinEmail}</h3> }
+                {LoggedinName===null && <a>To access account and manage orders</a>}
                 {/* 
                 if want to link it to any page use this code
                 <Link to="/products/clothing">Clothing</Link>
                  */}
                 
-                <button className={styles.loginSignButtom}>Login / SignUp</button> 
+                {token===null && <Link to="/login"> <button className={styles.loginSignButtom}>Login / SignUp</button> </Link>}
+                {token!=null && <button className={styles.loginSignButtom} onClick={handleLogout}>Logout</button>}
                 <br/>
                 <p className={styles.dropHeadings}>----------------------</p>
                 <a href="/">Orders</a>
@@ -600,12 +615,12 @@ const Navbar = () => {
               textDecoration: "none",
               color: "#282C3F",
             }}><FaRegHeart  style={{marginLeft:"20px"}}/>Wishlist</div>
-        <div style={{
+        <Link to="/bag"><div style={{
               fontWeight: "bold",
               fontSize: "17px",
               textDecoration: "none",
               color: "#282C3F",
-            }}><FaShoppingBag style={{marginLeft:"5px"}}/>Bag</div>
+            }}><FaShoppingBag style={{marginLeft:"5px"}}/>Bag</div></Link>
       </div>
     </div>
   );

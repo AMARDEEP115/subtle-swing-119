@@ -27,14 +27,15 @@ import { Footer } from "../../Components/Footer/Footer";
 
 function SinglePage() {
   const [data, setData] = useState([]);
+  const [token,setToken]=useState(localStorage.getItem("token"));
   //   const { addToData } = useContext(FilterContext);
 
   let temp=JSON.parse(localStorage.getItem("unique_prod"))
 
-  console.log(temp)
+  // console.log(temp)
   const dispatch = useDispatch();
   const { direction } = useParams();
-  console.log(direction);
+  // console.log(direction);
 
 
   const getData = () => {
@@ -49,7 +50,7 @@ function SinglePage() {
     
          axios.get(`https://brainy-goat-shoulder-pads.cyclic.app/${direction}`,dataparams)
           .then((r) => {
-      console.log(r.data[0])
+      // console.log(r.data[0])
           setData(r.data)
            
            
@@ -62,15 +63,35 @@ function SinglePage() {
 
   useEffect(() => {
     getData();
+    setToken(localStorage.getItem("token"));
   }, []);
 
 
 
-  const addToData = (data) => {
-alert("Product is added")
-    axios.post('https://brainy-goat-shoulder-pads.cyclic.app/cart', data)
-    .then((r) => console.log(r))
-    .catch((e) => console.log(e))
+  const addToBag = (data) => {
+    console.log(data);
+    if(token!=null){
+      let obj={
+          productName:data["product-product"],
+          Image:data["img-responsive src"],
+          price:data["product-discountedPrice"],
+          size:data["product-sizeInventoryPresent"],
+          color:"black",
+          quantity:1,
+          brand:data["product-brand"],
+          off_price:data["product-strike"],
+          discount:data["product-discountPercentage"]
+      }
+      // alert("Product is added");
+      console.log(obj);
+      axios.post("https://fine-ruby-rattlesnake-suit.cyclic.app/cart/create", obj,{
+        headers:{"Authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtYXJAZ21haWwuY29tIiwiVXNlcklkIjoiNjNjZDUwYzdlZGNkMDM5ZjA2YmYwYTE0IiwiaWF0IjoxNjc0NDA3MTQ5fQ.qj6hJr1rBM7SkvAdWfaiwuNhqawJTP3SejcdvqN6qOo"}
+      })
+      .then((r) => alert("Product added"))
+      .catch((e) => console.log(e))
+    } else {
+      alert("Login First");
+    }
   }
 
   // const addToDataWishlist = (data) => {
@@ -86,11 +107,11 @@ alert("Product is added")
      <br />
      <br />
      <br />
-      { data.map((ele) => {
+      { data.map((ele,i) => {
         return (
           <>
           
-            <DetailsMainDiv key="1" >
+            <DetailsMainDiv key={i} >
               <ImageContainer>
                 <ImgDiv>
                   <Img src={ele["img-responsive src"]} />
@@ -121,11 +142,11 @@ alert("Product is added")
                           {ele.brand}
                         </p>
                       </b>
-                      <p style={{ fontSize: "20px", color: "#8b8d97" }}>
+                      <p style={{ fontSize: "20px", color: "#8b8d97" ,marginTop:"10px"}}>
                         {ele["product-brand"]}
                       </p>
                     </div>
-                    <RatingDiv>
+                    <RatingDiv style={{marginTop:"15px",padding:"5px"}}>
                       <div
                         style={{
                           display: "flex",
@@ -139,7 +160,7 @@ alert("Product is added")
                           <p>{ele["product-ratingsContainer"]} </p>
                         </b>
                         <p style={{ color: "#48958f" }}>
-                          <StarIcon fontSize="small" />
+                          <StarIcon style={{marginTop:"7px"}} fontSize="small" />
                         </p>
                       </div>
                       <div
@@ -154,7 +175,7 @@ alert("Product is added")
                       </div>
                     </RatingDiv>
                   </div>
-                  <hr></hr>
+                  <hr style={{marginTop:"15px",marginBottom:"15px"}}></hr>
                   <div style={{ textAlign: "left", marginTop: "-5px",marginBottom:"10px" }}>
                     <div
                       style={{
@@ -239,7 +260,7 @@ alert("Product is added")
                     }}
                   >
                     <BagDiv
-                    onClick={()=>addToData(ele)}
+                    onClick={()=>addToBag(ele)}
                     >
                       <ShoppingBagIcon />
                       <p>
