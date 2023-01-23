@@ -66,8 +66,6 @@ Material UI & Styled-Components
 
 # **Home page**
 
-## Created by [Rajanadini Kumari](https://www.linkedin.com/in/).
-
 
 ![myntra1](https://user-images.githubusercontent.com/105987614/213974110-dbcb7cc8-a57a-434c-a4cc-d47a4032020a.png)
 ![myntra2](https://user-images.githubusercontent.com/105987614/213974216-1f0a558d-ff1b-4004-8d48-b088a3520604.png)
