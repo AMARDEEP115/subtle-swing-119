@@ -58,10 +58,10 @@ Material UI & Styled-Components
 13. Styled Components: Styled Components
 
 # **Contributors**: 
-- [Debasis Tripathy](https://www.linkedin.com/in/).
-- [AmarDeep ]([https://www.linkedin.com/in]).
-- [Rajanadini](https://www.linkedin.com/in/).
-- [Tarak] (https://www.linkedin.com/in/)
+- Debasis Tripathy
+- AmarDeep 
+- Rajanadini
+- Tarak
 # **Images**:-
 
 # **Home page**
