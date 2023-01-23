@@ -1,4 +1,5 @@
 # Shop It Easy :
+  It is an e-commerce.
 # subtle-swing-119
 
 # Tech Stack Used :
