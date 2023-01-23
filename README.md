@@ -74,16 +74,12 @@ Material UI & Styled-Components
 
 # **Login Page** 
 
-## Created by [Debasis Tripathy](https://www.linkedin.com/in/debasis-tripathy/).
-
 
 ![myntra10](https://user-images.githubusercontent.com/99638448/171443324-fec3ab9e-94c8-440a-a490-c5d1ae434a36.png)
 ![myntra11](https://user-images.githubusercontent.com/99638448/171443337-daea128c-0350-4cc0-8055-fde04da42983.png)
 
 
 # **Product page**
-
-## Created by [Tarak]([https://www.linkedin.com/in/)).
 
 
 ![myntra5](https://user-images.githubusercontent.com/105987614/213974279-5d90cfc4-7a65-4035-abba-e2d302f9d81d.png)
