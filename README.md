@@ -1,5 +1,8 @@
+# Shop It Easy :
 # subtle-swing-119
 
+# Tech Stack Used :
+ React | Redux | Chakra UI | NodeJS | Express | Mongoose | MongoDB | CSS
 
 # Websit Looks Like :
 
