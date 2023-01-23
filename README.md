@@ -92,33 +92,25 @@ Material UI & Styled-Components
 
 # **Product Details page And Individual Product Page**
 
-## Created by [Tarak ]([])).
 
 ![image](https://user-images.githubusercontent.com/105987614/213974437-dac44daa-5770-4127-93b4-85ac50ea3f6e.png)
 
 
 # **Add to Cart Page UI**
 
-## Created by [Amar Deep ](https://www.linkedin.com/in).
-
 ![myntra7](https://user-images.githubusercontent.com/99638448/171442215-a967323c-da5d-4991-a3a2-dafd2bfa8f16.png)
 
 
 # **Address, Payment & Order Successful Page Backend**
-
-## Created by [Debasis Tripathy](https://www.linkedin.com/in/debasis-tripathy/).
 
 
 ![image](https://user-images.githubusercontent.com/105987614/213974692-9b081939-2720-4ec9-990a-0b588cd6fc80.png)
 ![image](https://user-images.githubusercontent.com/105987614/213974782-94bc672e-e3f0-42c8-a2a1-e5edbea7db94.png)
 ![myntra9](https://user-images.githubusercontent.com/99638448/171442292-b8d56d05-0328-4c3b-a959-74671acb20ad.png)
 ![Screenshot (395)](https://user-images.githubusercontent.com/99638448/171443202-0d410e4f-c386-40bd-8ee8-454f1316d8a6.png)
-
-# **Checkout Page [Amar Deep]
   
   ![image](https://user-images.githubusercontent.com/105987614/213974822-1c9bfcfc-1676-4a09-9822-31addffd6739.png)
 
-# ** Admin Page [Amar Deep]
   ![image](https://user-images.githubusercontent.com/105987614/213974887-4ffc77f6-b6e8-4053-82ff-58ac6336d4a3.png)
   ![image](https://user-images.githubusercontent.com/105987614/213974909-f4db5b99-70a0-4bdb-94e3-5ef721553678.png)
   ![image](https://user-images.githubusercontent.com/105987614/213974932-7c031e23-3e2f-4b85-8819-88e336401bb8.png)
