@@ -60,7 +60,7 @@ Material UI & Styled-Components
 # **Contributors**: 
 - Debasis Tripathy
 - AmarDeep 
-- Rajanadini
+- Rajanadani
 - Tarak
 # **Images**:-
 
