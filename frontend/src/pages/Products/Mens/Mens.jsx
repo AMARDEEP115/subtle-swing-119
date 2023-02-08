@@ -36,29 +36,23 @@ const Mens = () => {
   }, [searchParams, dispatch, location]);
 
   return (
-    <>
-      
-    
+    <div>
       <Navbar />
-     
-     <br />
-     <br />
-     <br />
-     <br />
-     <br />
 
-      <div className={css.main_section} >
-        <Filter
-          one="Roadster"
-          two="HRX by Hrithik Roshan"
-          three="Mast & Harbour"
-          four="Huetrap"
-          five="WROGN"
-          six="Urbano Fashion"
-          seven="Calvin Klein Jeans"
-        />
+      <div className={css.main_section}>
+        <div className={css.filter_div_el}>
+          <Filter
+            one="Roadster"
+            two="HRX by Hrithik Roshan"
+            three="Mast & Harbour"
+            four="Huetrap"
+            five="WROGN"
+            six="Urbano Fashion"
+            seven="Calvin Klein Jeans"
+          />
+        </div>
 
-        <div className={css.product_section}>
+        <div className={css.product_section_mens}>
           {prod.length > 0 &&
             prod.map((list, index) => {
               return (
@@ -80,7 +74,7 @@ const Mens = () => {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

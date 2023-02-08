@@ -21,36 +21,26 @@ const getProductssError = () => {
   };
 };
 
-
-
 const getProductsMens = (params) => (dispatch) => {
-
   //console.log(name)
   dispatch(getProductsRequest());
   return axios
-    .get(`https://brainy-goat-shoulder-pads.cyclic.app/tshirt`,params)
+    .get(`https://brainy-goat-shoulder-pads.cyclic.app/tshirt`, params)
     .then((r) => {
-
-      console.log(r.data)
+      console.log(r.data);
       dispatch(getProductsSuccess(r.data));
-
-     
     })
     .catch((e) => {
       dispatch(getProductssError());
     });
-  
 };
 const getProductsWomens = (name) => (dispatch) => {
   dispatch(getProductsRequest());
   return axios
-    .get(`https://brainy-goat-shoulder-pads.cyclic.app/beauty`,name)
+    .get(`https://brainy-goat-shoulder-pads.cyclic.app/beauty`, name)
     .then((r) => {
-
-      console.log(r)
+      console.log(r);
       dispatch(getProductsSuccess(r.data));
-
-     
     })
     .catch((e) => {
       dispatch(getProductssError());
@@ -59,11 +49,9 @@ const getProductsWomens = (name) => (dispatch) => {
 const getProductsKids = (name) => (dispatch) => {
   dispatch(getProductsRequest());
   return axios
-    .get(`https://brainy-goat-shoulder-pads.cyclic.app/kidswear`,name)
+    .get(`https://brainy-goat-shoulder-pads.cyclic.app/kidswear`, name)
     .then((r) => {
       dispatch(getProductsSuccess(r.data));
-
-     
     })
     .catch((e) => {
       dispatch(getProductssError());
@@ -76,12 +64,10 @@ const getProductsKids = (name) => (dispatch) => {
 //     .then((r) => {
 //       dispatch(getProductsSuccess(r.data));
 
-     
 //     })
 //     .catch((e) => {
 //       dispatch(getProductssError());
 //     });
 // };
 
-
-export { getProductsMens,getProductsWomens,getProductsKids}
+export { getProductsMens, getProductsWomens, getProductsKids };
