@@ -41,22 +41,20 @@ const Womens = () => {
 
   return (
     <>
-    <Navbar />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+      <Navbar />
+
       <div className={css.main_section}>
-        <Filter
-          one="Lakme"
-          six="Renee"
-          seven="SWISS BEAUTY"
-          two="Maybelline"
-          three="FACES CANADA"
-          four="Colorbar"
-          five="LOreal"
-        />
+        <div className={css.filter_section}>
+          <Filter
+            one="Lakme"
+            six="Renee"
+            seven="SWISS BEAUTY"
+            two="Maybelline"
+            three="FACES CANADA"
+            four="Colorbar"
+            five="LOreal"
+          />
+        </div>
 
         <div className={css.product_section}>
           {prod.length > 0 &&

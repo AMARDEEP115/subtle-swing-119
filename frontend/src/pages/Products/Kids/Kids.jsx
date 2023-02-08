@@ -35,24 +35,20 @@ const Kids = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
 
-    <br />
-    <br />
-
-    <br />
-    <br />
-    <br />
       <div className={css.main_section}>
-        <Filter
-          one="Gini and Jony"
-          two="HERE&NOW"
-          five="Roadster"
-          seven="Peter England"
-          six="U.S. Polo Assn. Kids"
-          three="H&M"
-          four="Ed-a-Mamma"
-        />
+        <div className={css.filter_section}>
+          <Filter
+            one="Gini and Jony"
+            two="HERE&NOW"
+            five="Roadster"
+            seven="Peter England"
+            six="U.S. Polo Assn. Kids"
+            three="H&M"
+            four="Ed-a-Mamma"
+          />
+        </div>
 
         <div className={css.product_section}>
           {prod.length > 0 &&

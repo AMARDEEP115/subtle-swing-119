@@ -1,35 +1,35 @@
-.navMainDiv{
-    display: flex;
-    height: 100px;
-    width: 100%;
-    background-color: rgb(197, 199, 199);
-    align-items: center;
-    gap: 20px;
-    position:fixed;
+.navMainDiv {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(197, 199, 199);
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
+  position: fixed;
 }
-.navSubDiv1{
-    width: 13%;
+.navSubDiv1 {
+  width: 13%;
 }
-.logoSize{
-    height: 200px;
+.logoSize {
+  height: 200px;
 }
-.navSubDiv2{
-    display: flex;
-    justify-content: space-evenly;
-    /* border: 1px solid red;*/
-    width: 40%;
-    height: 100px;
-    align-items: center;
+.navSubDiv2 {
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid red;*/
+  width: 40%;
+  height: 100px;
+  align-items: center;
 }
-.navSubDiv3{
-    width: 25%;
+.navSubDiv3 {
+  width: 25%;
 }
-.navSubDiv4{
-    display: flex;
-    width: 20%;
-    justify-content: space-evenly;
-    align-items: center;
-    
+.navSubDiv4 {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 /* .navSubDiv2 {
     
@@ -41,193 +41,185 @@
     position: relative;
     margin-bottom:1vh;
   } */
-  
-  .dropdown {
-    display: inline-block;
-  }
-  
-  
-  .dropbtn {
-    padding: 1vh;
-    font-size: 17px;
-    border-bottom:2px solid transparent;
-    margin: auto;
-    font-weight: bold;
-    cursor:pointer;
-    transition:font-weight ease-out 0.1s;
-    -webkit-transition:font-weight ease-out 0.1s;
-    -moz-transition:font-weight ease-out 0.1s;
-    -ms-transition:font-weight ease-out 0.1s;
-    -o-transition:font-weight ease-out 0.1s;
-  }
-  
-  .dropbtn:hover {
-      transition:font-weight ease-in 0.1s;
-      -webkit-transition:font-weight ease-in 0.1s;
-      -moz-transition:font-weight ease-in 0.1s;
-      -ms-transition:font-weight ease-in 0.1s;
-      -o-transition:font-weight ease-in 0.1s;
-      font-weight: 700;
-      border-bottom:2px solid #ee4a1b;
-  }
-  
-  .tabStyles {
-      transition:font-weight ease-in 0.1s;
-      -webkit-transition:font-weight ease-in 0.1s;
-      -moz-transition:font-weight ease-in 0.1s;
-      -ms-transition:font-weight ease-in 0.1s;
-      -o-transition:font-weight ease-in 0.1s;
-      font-weight: 700;
-      border-bottom:2px solid #ee4a1b;
-  }
-  
-  
-  
-  .dropdownContent {
-    display: none;
-    padding:2vh 0;
-    font-size: 0.9vw;
-    text-align: left;
-    position: absolute;
-    background-color: white;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 80vw;
-    z-index: 1000;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    /* margin-left: 7vh; */
-  }
-  
-  .dropdown:hover > .dropdownContent {
-    display: block;
-  }
-  
-  
-  .dropdownContent a {
-    color: black;
-    /* padding: 1.1vh 0; */
-    text-decoration: none;
-    display: block;
-    font-weight: 400;
-    transition:font-weight ease-out 0.05s;
-    -webkit-transition:font-weight ease-out 0.05s;
-    -moz-transition:font-weight ease-out 0.05s;
-    -ms-transition:font-weight ease-out 0.05s;
-    -o-transition:font-weight ease-out 0.05s;
-  }
-  
-  .dropdownContent a:hover {
-    font-weight: 600;
-    transition:font-weight ease-in 0.05s;
-    -webkit-transition:font-weight ease-in 0.05s;
-    -moz-transition:font-weight ease-in 0.05s;
-    -ms-transition:font-weight ease-in 0.05s;
-    -o-transition:font-weight ease-in 0.05s;
-  }
-  
-  .dropHeadings{
-    font-weight: 700;
-    font-size: medium;
-    color: rgb(245, 69, 98);
-    margin:1vh 0;
-  }
-  
-  .dropdownFlex {
-    display: flex;
-    gap: 2vw;
-    justify-content: center;
-  }
-  .loginSignButtom{
-    width: 130px;
-    height: 40px;
-    border: 1px solid rgb(94, 93, 93);
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 10px;
-    color: rgb(245, 69, 98);
-  }
 
-  .dropdownContentProfile {
-    display: none;
-    padding:5vh;
-    font-size: 0.9vw;
-    text-align: left;
-    position: absolute;
-    background-color: white;
-    left: 85%;
-    transform: translate(-50%, 0);
-    width: 20vw;
-    z-index: 1000;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    /* margin-left: 7vh; */
-  }
-  
-  .dropdown:hover > .dropdownContentProfile {
-    display: block;
-  }
-  
-  
-  .dropdownContentProfile a {
-    color: black;
-    /* padding: 1.1vh 0; */
-    text-decoration: none;
-    display: block;
-    font-weight: 400;
-    transition:font-weight ease-out 0.05s;
-    -webkit-transition:font-weight ease-out 0.05s;
-    -moz-transition:font-weight ease-out 0.05s;
-    -ms-transition:font-weight ease-out 0.05s;
-    -o-transition:font-weight ease-out 0.05s;
-  }
-  
-  .dropdownContentProfile a:hover {
-    font-weight: 600;
-    transition:font-weight ease-in 0.05s;
-    -webkit-transition:font-weight ease-in 0.05s;
-    -moz-transition:font-weight ease-in 0.05s;
-    -ms-transition:font-weight ease-in 0.05s;
-    -o-transition:font-weight ease-in 0.05s;
-  }
-
-  /* //search box part */
-
-  .search{
-    
-    display: inline-block;
-    font-size: 14px;
-    height: 20px;
-    line-height: 24px;
-    width: 95%;
-    color: #696e79;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    padding: 8px 10px 10px;
-    margin: 0;
-    outline: 0;
-    border: 1px solid #f5f5f6;
-    border-radius: 0 4px 4px 0;
-    border-left: 0;
-    background: #f5f5f6;
-    justify-self: center;
-  
-  }
-  .searchbtn{
-    border: 1px solid #f5f5f6;
-    border-radius:  5px 0 0 5px ;
-    border-right: 0;
-    width: 5%;
-    margin: 0;
-    outline: 0;
-    padding: 8px 10px 10px;
-    -webkit-box-sizing: content-box;
-    height: 20px;
-    line-height: 24px;
-    display: inline-block;
-    font-size: 14px;
-    background: #f5f5f6;
+.dropdown {
+  display: inline-block;
 }
-.search_div{
 
+.dropbtn {
+  padding: 1vh;
+  font-size: 17px;
+  border-bottom: 2px solid transparent;
+  margin: auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: font-weight ease-out 0.1s;
+  -webkit-transition: font-weight ease-out 0.1s;
+  -moz-transition: font-weight ease-out 0.1s;
+  -ms-transition: font-weight ease-out 0.1s;
+  -o-transition: font-weight ease-out 0.1s;
+}
+
+.dropbtn:hover {
+  transition: font-weight ease-in 0.1s;
+  -webkit-transition: font-weight ease-in 0.1s;
+  -moz-transition: font-weight ease-in 0.1s;
+  -ms-transition: font-weight ease-in 0.1s;
+  -o-transition: font-weight ease-in 0.1s;
+  font-weight: 700;
+  border-bottom: 2px solid #ee4a1b;
+}
+
+.tabStyles {
+  transition: font-weight ease-in 0.1s;
+  -webkit-transition: font-weight ease-in 0.1s;
+  -moz-transition: font-weight ease-in 0.1s;
+  -ms-transition: font-weight ease-in 0.1s;
+  -o-transition: font-weight ease-in 0.1s;
+  font-weight: 700;
+  border-bottom: 2px solid #ee4a1b;
+}
+
+.dropdownContent {
+  display: none;
+  padding: 2vh 0;
+  font-size: 0.9vw;
+  text-align: left;
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80vw;
+  z-index: 1000;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  /* margin-left: 7vh; */
+}
+
+.dropdown:hover > .dropdownContent {
+  display: block;
+}
+
+.dropdownContent a {
+  color: black;
+  /* padding: 1.1vh 0; */
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
+  transition: font-weight ease-out 0.05s;
+  -webkit-transition: font-weight ease-out 0.05s;
+  -moz-transition: font-weight ease-out 0.05s;
+  -ms-transition: font-weight ease-out 0.05s;
+  -o-transition: font-weight ease-out 0.05s;
+}
+
+.dropdownContent a:hover {
+  font-weight: 600;
+  transition: font-weight ease-in 0.05s;
+  -webkit-transition: font-weight ease-in 0.05s;
+  -moz-transition: font-weight ease-in 0.05s;
+  -ms-transition: font-weight ease-in 0.05s;
+  -o-transition: font-weight ease-in 0.05s;
+}
+
+.dropHeadings {
+  font-weight: 700;
+  font-size: medium;
+  color: rgb(245, 69, 98);
+  margin: 1vh 0;
+}
+
+.dropdownFlex {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+}
+.loginSignButtom {
+  width: 130px;
+  height: 40px;
+  border: 1px solid rgb(94, 93, 93);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  color: rgb(245, 69, 98);
+}
+
+.dropdownContentProfile {
+  display: none;
+  padding: 5vh;
+  font-size: 0.9vw;
+  text-align: left;
+  position: absolute;
+  background-color: white;
+  left: 85%;
+  transform: translate(-50%, 0);
+  width: 20vw;
+  z-index: 1000;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  /* margin-left: 7vh; */
+}
+
+.dropdown:hover > .dropdownContentProfile {
+  display: block;
+}
+
+.dropdownContentProfile a {
+  color: black;
+  /* padding: 1.1vh 0; */
+  text-decoration: none;
+  display: block;
+  font-weight: 400;
+  transition: font-weight ease-out 0.05s;
+  -webkit-transition: font-weight ease-out 0.05s;
+  -moz-transition: font-weight ease-out 0.05s;
+  -ms-transition: font-weight ease-out 0.05s;
+  -o-transition: font-weight ease-out 0.05s;
+}
+
+.dropdownContentProfile a:hover {
+  font-weight: 600;
+  transition: font-weight ease-in 0.05s;
+  -webkit-transition: font-weight ease-in 0.05s;
+  -moz-transition: font-weight ease-in 0.05s;
+  -ms-transition: font-weight ease-in 0.05s;
+  -o-transition: font-weight ease-in 0.05s;
+}
+
+/* //search box part */
+
+.search {
+  display: inline-block;
+  font-size: 14px;
+  height: 20px;
+  line-height: 24px;
+  width: 95%;
+  color: #696e79;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 8px 10px 10px;
+  margin: 0;
+  outline: 0;
+  border: 1px solid #f5f5f6;
+  border-radius: 0 4px 4px 0;
+  border-left: 0;
+  background: #f5f5f6;
+  justify-self: center;
+}
+.searchbtn {
+  border: 1px solid #f5f5f6;
+  border-radius: 5px 0 0 5px;
+  border-right: 0;
+  width: 5%;
+  margin: 0;
+  outline: 0;
+  padding: 8px 10px 10px;
+  -webkit-box-sizing: content-box;
+  height: 20px;
+  line-height: 24px;
+  display: inline-block;
+  font-size: 14px;
+  background: #f5f5f6;
+}
+.search_div {
   width: 320px;
   float: left;
   display: flex;

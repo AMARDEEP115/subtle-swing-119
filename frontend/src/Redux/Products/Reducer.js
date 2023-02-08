@@ -1,25 +1,24 @@
 import * as types from "./actionTypes";
 
-
 // NOTE: DO NOT MODIFY the intial state structure in this file.
 const initialState = {
-  products:[],
+  products: [],
   isLoading: false,
   isError: false,
 };
 
 const reducer = (state = initialState, action) => {
   const { type, payload } = action;
-  switch(type){
+  switch (type) {
     case types.GET_PRODUCTS_REQUEST:
-      return {...state, isLoading: false}
+      return { ...state, isLoading: false };
     case types.GET_PRODUCTS_FAILURE:
-      return {...state, isLoading:false, isError: true}
+      return { ...state, isLoading: false, isError: true };
 
-    case types.GET_PRODUCTS_SUCCESS: 
-      return { ...state, isLoading: false, products: payload}
+    case types.GET_PRODUCTS_SUCCESS:
+      return { ...state, isLoading: false, products: payload };
     default:
-      return state
+      return state;
   }
   //write the logic to handle, get task, update task, add task, and delete task
   // return state;
